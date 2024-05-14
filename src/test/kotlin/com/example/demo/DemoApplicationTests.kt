@@ -4,6 +4,16 @@ import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 import org.junit.jupiter.api.Assertions.assertTrue;
 import org.apache.http.Request
+import org.apache.http.HttpHost // Import HttpHost from Apache HttpClient
+import org.apache.http.client.CredentialsProvider // Import CredentialsProvider from Apache HttpClient
+import org.apache.http.impl.client.BasicCredentialsProvider // Import BasicCredentialsProvider from Apache HttpClient
+import org.apache.http.auth.AuthScope // Import AuthScope from Apache HttpClient
+import org.apache.http.auth.UsernamePasswordCredentials // Import UsernamePasswordCredentials from Apache HttpClient
+import org.apache.http.client.ResponseHandler // Import ResponseHandler from Apache HttpClient
+import org.apache.http.client.methods.Request // Import Request from Apache HttpClient
+import org.apache.http.impl.client.HttpClients // Import HttpClients from Apache HttpClient
+import org.apache.http.impl.nio.client.HttpAsyncClients // Import HttpAsyncClients from Apache HttpClient
+import org.apache.http.util.EntityUtils // Import EntityUtils from Apache HttpClient
 
 @SpringBootTest
 class DemoApplicationTests {
@@ -21,7 +31,7 @@ class DemoApplicationTests {
 		val credentialsProvider = BasicCredentialsProvider().apply {
 			setCredentials(
 				AuthScope.ANY,
-				UsernamePasswordCredentials(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASSWORD)
+				UsernamePasswordCredentials("elastic", "changeme")
 			)
 		}
 

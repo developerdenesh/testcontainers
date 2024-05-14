@@ -25,7 +25,14 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	testImplementation("org.testcontainers:testcontainers:1.19.8")
     testImplementation("org.testcontainers:elasticsearch:1.19.8")
-	implementation("org.apache.httpcomponents:httpclient:4.5.13")
+
+    // Apache HttpClient dependencies
+    implementation("org.apache.httpcomponents:httpclient:4.5.13")
+    implementation("org.apache.httpcomponents:httpcore:4.4.13")
+
+    // Kotlin dependencies if working with Kotlin
+    implementation(kotlin("stdlib"))
+    implementation(kotlin("reflect"))
 }
 
 tasks.withType<KotlinCompile> {

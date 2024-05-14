@@ -1,0 +1,13 @@
+image: gradle:7-jdk11
+
+services:
+  - docker:dind
+  alias: docker
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - ./gradlew test --info

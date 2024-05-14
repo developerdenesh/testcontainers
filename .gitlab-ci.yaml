@@ -11,3 +11,5 @@ test:
   stage: test
   script:
     - ./gradlew test --info
+  only:
+  - main

@@ -25,6 +25,7 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	testImplementation("org.testcontainers:testcontainers:1.19.8")
     testImplementation("org.testcontainers:elasticsearch:1.19.8")
+	implementation("org.apache.httpcomponents:httpclient:4.5.13")
 }
 
 tasks.withType<KotlinCompile> {

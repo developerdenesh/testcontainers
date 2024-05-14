@@ -23,8 +23,8 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-	testImplementation "org.testcontainers:testcontainers:1.19.8"
-	testImplementation "org.testcontainers:elasticsearch:1.19.8"
+	testImplementation("org.testcontainers:testcontainers:1.19.8")
+    testImplementation("org.testcontainers:elasticsearch:1.19.8")
 }
 
 tasks.withType<KotlinCompile> {

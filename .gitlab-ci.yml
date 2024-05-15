@@ -5,7 +5,16 @@ services:
     alias: docker
 
 stages:
+  - test-docker
   - test
+
+test-docker:
+  stage: test-docker
+  script:
+    - docker image ls
+    - docker container ls
+  only:
+  - main
 
 test:
   stage: test

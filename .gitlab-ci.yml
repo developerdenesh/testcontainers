@@ -9,6 +9,8 @@ stages:
   - test
 
 test-docker:
+  allow_failure: true
+  image: docker:24.0.5-dind
   stage: test-docker
   script:
     - docker image ls

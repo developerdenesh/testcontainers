@@ -10,6 +10,7 @@ import org.apache.http.auth.UsernamePasswordCredentials;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.Request;
 import org.elasticsearch.client.Response;
+import org.apache.http.HttpHost;
 
 @SpringBootTest
 class DemoApplicationTests {

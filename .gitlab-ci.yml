@@ -1,7 +1,7 @@
 image: gradle:7-jdk17
 
 services:
-  - name: docker:19.03.12-dind
+  - name: docker:24.0.5-dind
     alias: docker
 
 stages:

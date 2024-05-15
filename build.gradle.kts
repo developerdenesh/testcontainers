@@ -27,7 +27,7 @@ dependencies {
     testImplementation("org.testcontainers:elasticsearch:1.19.8")
 	testImplementation("org.elasticsearch.client:elasticsearch-rest-client:8.12.0")
     testImplementation("org.elasticsearch.client:transport:7.17.17")
-    testImplementation('org.assertj:assertj-core:3.25.2')
+    testImplementation("org.assertj:assertj-core:3.25.2")
 
     // Apache HttpClient dependencies
     implementation("org.apache.httpcomponents:httpclient:4.5.13")

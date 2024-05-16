@@ -16,8 +16,9 @@ variables:
 stages:
   - test-docker
   - test
+  - test-docker-after
 
-test-docker:
+test-docker-before:
   allow_failure: true
   image: docker:24.0.5-dind
   stage: test-docker
@@ -31,5 +32,15 @@ test:
   stage: test
   script:
     - ./gradlew test --info
+  only:
+  - main
+
+test-docker-after:
+  allow_failure: true
+  image: docker:24.0.5-dind
+  stage: test-docker-after
+  script:
+    - docker image ls
+    - docker container ls
   only:
   - main

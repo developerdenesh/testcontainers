@@ -4,10 +4,6 @@ services:
   - name: docker:26.1.2-dind
     alias: docker
 
-variables:
-  # Instruct Testcontainers to use the daemon of DinD, use port 2375 for non-tls connections.
-  DOCKER_HOST: "tcp://docker:2375"
-
 stages:
   - test-docker
   - test

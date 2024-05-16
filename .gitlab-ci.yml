@@ -1,7 +1,7 @@
 image: gradle:7-jdk17
 
 services:
-  - name: docker:24.0.5-dind
+  - name: docker:26.1.2-dind
     alias: docker
     command: ["--tls=false"]
 

@@ -4,6 +4,10 @@ services:
   - name: docker:26.1.2-dind
     alias: docker
 
+variables:
+  # Instruct Docker not to start over TLS.
+  DOCKER_TLS_CERTDIR: ""
+
 stages:
   - test-docker
   - test

@@ -21,7 +21,8 @@ class DemoApplicationTests {
 
 	@Test
 	fun testcontainerstest() {
-		val container = ElasticsearchContainer("docker.elastic.co/elasticsearch/elasticsearch:8.13.4")
+		val container = ElasticsearchContainer("docker.elastic.co/elasticsearch/elasticsearch:7.0.0")
+						.withEnv("xpack.security.enabled", "false")
 
 		container.start()
 

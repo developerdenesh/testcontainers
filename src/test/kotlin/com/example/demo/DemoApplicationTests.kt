@@ -43,7 +43,7 @@ class DemoApplicationTests {
 
 		// Use the response as needed
 
-		container.close()
+		// container.close()
 		assertTrue(true);
 	}
 }
